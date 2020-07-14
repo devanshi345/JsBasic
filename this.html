@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>!THIS!</title>
+	<style>
+		p{
+			width: 400px;
+			height: 40px;
+			background: lightblue;
+			border: 5px solid black;
+			padding: 2%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+			display: inline-block;
+			float: left;
+			margin: 7%;
+		}
+	</style>
+	<script>
+		function fun(x) {
+			document.getElementById('pickme').innerHTML= x.alt;	
+		}
+	</script>
+</head>
+	<body>
+		<h1>USE OF 'THIS'</h1>
+		<p id="pickme">See the description of the following image here by hovering over it.</p>
+		<img src="img/1.webp" alt="Image of Sun" onmouseover="fun(this)" onmouseout="document.getElementById('pickme').innerHTML='See the description of the following image here by hovering over it.';">
+		<img src="img/2.webp" alt="Image of Pahadi" onmouseover="fun(this)" onmouseout="document.getElementById('pickme').innerHTML='See the description of the following image here by hovering over it.';">
+		<img src="img/3.jpg" alt="Image of water and sun" onmouseover="fun(this)" onmouseout="document.getElementById('pickme').innerHTML='See the description of the following image here by hovering over it.';">
+	</body>
+</html>
