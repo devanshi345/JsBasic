@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS basic</title>
+
+	<style>
+		/*h1{
+			width:200px;
+			transition: transform 2s;
+		}
+		h1:hover{
+			transform: rotate(360deg);
+		}*/
+		.c{
+			display: none;
+		}
+		.o{
+			display: block;
+		}
+	</style>
+	
+	<script>
+		function openme()
+		{
+			var x=document.getElementById("set1");
+			//x.style.display="block";
+			x.className="o";
+		}
+		function closeme()
+		{
+			var x=document.getElementById("set1");
+			//x.style.display="none";
+			x.className="c";
+		}
+	</script>
+
+</head>
+	<body>
+		<h1>Modify the DOM</h1>
+		<button onclick="document.getElementById('set').innerHTML='Clicked First Button';"> First</button>
+		<button onclick="document.getElementById('set').innerHTML='Clicked Second Button';"> Second</button>
+		<p>This code shouldn't change.</p>
+		<p id="set">This will change.</p>
+
+		<br>
+
+		<button type="button" onclick="openme()">Open</button>
+		<button type="button" onclick="closeme()">Close</button>
+		<p id="set1">You can control its visibility. </p>
+	</body>
+</html>
